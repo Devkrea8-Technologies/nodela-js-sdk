@@ -1,6 +1,6 @@
 {
   "name": "nodela-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "SDK wrapper for Nodela dev api's to aide in implementation of Nodela on javascript/NodeJs servers, by abstracting away the api complexity and providing easy to use interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

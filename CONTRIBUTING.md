@@ -70,8 +70,8 @@ Be respectful, constructive, and collaborative. We are all building this togethe
 
 ### Prerequisites
 
-- **Node.js** >= 14.0.0 (we test against 16.x, 18.x, and 20.x in CI)
-- **npm** >= 7.0.0 (ships with Node 16+)
+- **Node.js** >= 18.18.0 (we test against 18.x, 20.x, and 22.x in CI)
+- **npm** >= 9.0.0 (ships with Node 18+)
 - **Git**
 
 ### Fork and Clone
@@ -152,7 +152,7 @@ nodela-js-sdk/
 ├── tsconfig.json             # TypeScript config
 ├── tsconfig.build.json       # Build-only TS config (excludes tests)
 ├── jest.config.js            # Jest configuration
-├── .eslintrc.json            # ESLint rules
+├── eslint.config.mts         # ESLint flat config
 ├── .prettierrc               # Prettier formatting rules
 └── .changeset/config.json    # Changeset release configuration
 ```
@@ -982,7 +982,7 @@ When you open a PR, GitHub Actions will automatically run:
 3. **Build** -- `npm run build`
 4. **Test with coverage** -- `npm run test:coverage`
 
-These run on a matrix of Node.js 16.x, 18.x, and 20.x. All must pass before merge.
+These run on a matrix of Node.js 18.x, 20.x, and 22.x. All must pass before merge.
 
 ### Review Process
 

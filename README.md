@@ -3,7 +3,7 @@
 [![CI](https://github.com/Devkrea8-Technologies/nodela-js-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/Devkrea8-Technologies/nodela-js-sdk/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/nodela-sdk.svg)](https://www.npmjs.com/package/nodela-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.18.0-brightgreen.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 
 The official JavaScript/TypeScript SDK for the [Nodela](https://nodela.com) stablecoin payments API. Accept crypto payments globally with support for 60+ fiat currencies, automatic currency conversion, and seamless checkout experiences.
@@ -56,7 +56,7 @@ The official JavaScript/TypeScript SDK for the [Nodela](https://nodela.com) stab
 
 ## Requirements
 
-- **Node.js** >= 14.0.0
+- **Node.js** >= 18.18.0
 - A Nodela API key (obtain one from the [Nodela Dashboard](https://nodela.com))
 
 API keys follow the format:
@@ -641,7 +641,7 @@ nodela-js-sdk/
 │   └── publish.yml           # Automated npm publishing via changesets
 ├── tsconfig.json             # TypeScript configuration
 ├── jest.config.js            # Jest test configuration
-├── .eslintrc.json            # ESLint rules
+├── eslint.config.mts         # ESLint flat config
 └── .prettierrc               # Prettier formatting rules
 ```
 
