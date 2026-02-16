@@ -24,7 +24,7 @@ export class Config {
 
     this.config = {
       apiKey,
-      baseURL: 'https://api.nodela.com',
+      baseURL: 'https://api.nodela.co',
       timeout: options?.timeout ?? 5000,
       maxRetries: options?.maxRetries ?? 3,
       environment: options?.environment ?? 'production',

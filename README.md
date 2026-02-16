@@ -57,7 +57,7 @@ The official JavaScript/TypeScript SDK for the [Nodela](https://nodela.co) stabl
 ## Requirements
 
 - **Node.js** >= 18.18.0
-- A Nodela API key (obtain one from the [Nodela Dashboard](https://nodela.com))
+- A Nodela API key (obtain one from the [Nodela Dashboard](https://nodela.co))
 
 API keys follow the format:
 | Prefix | Environment |
@@ -101,7 +101,7 @@ const invoice = await nodela.invoices.create({
 });
 
 console.log(invoice.data?.checkout_url);
-// => "https://checkout.nodela.com/inv_abc123..."
+// => "https://checkout.nodela.co/inv_abc123..."
 ```
 
 ---
@@ -137,7 +137,7 @@ const config = nodela.getConfig();
 console.log(config);
 // {
 //   apiKey: 'nk_live_your_api_key',
-//   baseURL: 'https://api.nodela.com',
+//   baseURL: 'https://api.nodela.co',
 //   timeout: 10000,
 //   maxRetries: 5,
 //   environment: 'sandbox'

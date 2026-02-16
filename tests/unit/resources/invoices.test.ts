@@ -49,7 +49,7 @@ describe('Invoices', () => {
         original_currency: 'USD',
         amount: '100',
         currency: 'USDT',
-        checkout_url: 'https://checkout.nodela.com/inv_123',
+        checkout_url: 'https://checkout.nodela.co/inv_123',
         created_at: '2025-01-01T00:00:00Z',
       },
     };

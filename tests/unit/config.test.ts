@@ -9,7 +9,7 @@ describe('Config', () => {
       const config = new Config(validTestKey);
 
       expect(config.get('apiKey')).toBe(validTestKey);
-      expect(config.get('baseURL')).toBe('https://api.nodela.com');
+      expect(config.get('baseURL')).toBe('https://api.nodela.co');
       expect(config.get('timeout')).toBe(5000);
       expect(config.get('maxRetries')).toBe(3);
       expect(config.get('environment')).toBe('production');
@@ -146,7 +146,7 @@ describe('Config', () => {
       const config = new Config(validTestKey, { timeout: 7000, environment: 'sandbox' });
 
       expect(config.get('apiKey')).toBe(validTestKey);
-      expect(config.get('baseURL')).toBe('https://api.nodela.com');
+      expect(config.get('baseURL')).toBe('https://api.nodela.co');
       expect(config.get('timeout')).toBe(7000);
       expect(config.get('maxRetries')).toBe(3);
       expect(config.get('environment')).toBe('sandbox');
@@ -160,7 +160,7 @@ describe('Config', () => {
 
       expect(allConfig).toEqual({
         apiKey: validTestKey,
-        baseURL: 'https://api.nodela.com',
+        baseURL: 'https://api.nodela.co',
         timeout: 9000,
         maxRetries: 3,
         environment: 'production',

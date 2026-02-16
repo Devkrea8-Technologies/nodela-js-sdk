@@ -47,7 +47,7 @@ describe('Nodela SDK Integration Tests', () => {
 
       expect(mockedAxios.create).toHaveBeenCalledWith(
         expect.objectContaining({
-          baseURL: 'https://api.nodela.com',
+          baseURL: 'https://api.nodela.co',
           headers: expect.objectContaining({
             Authorization: 'Bearer nk_test_mykey123',
           }),
@@ -134,7 +134,7 @@ describe('Nodela SDK Integration Tests', () => {
             amount: '100.00',
             currency: 'USDT',
             exchange_rate: '1.0',
-            checkout_url: 'https://checkout.nodela.com/inv_abc123',
+            checkout_url: 'https://checkout.nodela.co/inv_abc123',
             status: 'pending',
             created_at: '2025-06-01T12:00:00Z',
           },
@@ -148,7 +148,7 @@ describe('Nodela SDK Integration Tests', () => {
       });
 
       expect(result.success).toBe(true);
-      expect(result.data?.checkout_url).toBe('https://checkout.nodela.com/inv_abc123');
+      expect(result.data?.checkout_url).toBe('https://checkout.nodela.co/inv_abc123');
       expect(result.data?.invoice_id).toBe('INV-2025-001');
     });
 
@@ -169,7 +169,7 @@ describe('Nodela SDK Integration Tests', () => {
               email: 'alice@example.com',
               name: 'Alice Smith',
             },
-            checkout_url: 'https://checkout.nodela.com/inv_def456',
+            checkout_url: 'https://checkout.nodela.co/inv_def456',
             created_at: '2025-06-01T12:30:00Z',
           },
         },
@@ -578,7 +578,7 @@ describe('Nodela SDK Integration Tests', () => {
             original_currency: 'CAD',
             amount: '55',
             currency: 'USDT',
-            checkout_url: 'https://checkout.nodela.com/inv_seq1',
+            checkout_url: 'https://checkout.nodela.co/inv_seq1',
             created_at: '2025-01-01T00:00:00Z',
           },
         },
@@ -640,7 +640,7 @@ describe('Nodela SDK Integration Tests', () => {
               original_currency: 'GBP',
               amount: '250',
               currency: 'USDT',
-              checkout_url: 'https://checkout.nodela.com/inv_mixed',
+              checkout_url: 'https://checkout.nodela.co/inv_mixed',
               created_at: '2025-01-01',
             },
           },
@@ -682,7 +682,7 @@ describe('Nodela SDK Integration Tests', () => {
       expect(config.environment).toBe('production');
       expect(config.timeout).toBe(5000);
       expect(config.maxRetries).toBe(3);
-      expect(config.baseURL).toBe('https://api.nodela.com');
+      expect(config.baseURL).toBe('https://api.nodela.co');
     });
 
     it('should reflect sandbox environment', () => {

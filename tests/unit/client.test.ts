@@ -47,7 +47,7 @@ describe('HTTPClient', () => {
       new HTTPClient(config);
 
       expect(mockedAxios.create).toHaveBeenCalledWith({
-        baseURL: 'https://api.nodela.com',
+        baseURL: 'https://api.nodela.co',
         timeout: 5000,
         headers: {
           'Content-Type': 'application/json',

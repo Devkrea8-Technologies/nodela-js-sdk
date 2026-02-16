@@ -80,7 +80,7 @@ describe('Nodela', () => {
 
       expect(config).toEqual({
         apiKey: validTestKey,
-        baseURL: 'https://api.nodela.com',
+        baseURL: 'https://api.nodela.co',
         timeout: 5000,
         maxRetries: 3,
         environment: 'production',

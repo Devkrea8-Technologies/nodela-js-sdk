@@ -1,5 +1,11 @@
 # nodela-sdk
 
+## 1.0.4
+
+### Patch Changes
+
+- Corrected the api base url to use the correct base url of api.nodela.co
+
 ## 1.0.3
 
 ### Patch Changes
