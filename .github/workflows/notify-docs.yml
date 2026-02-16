@@ -1,0 +1,20 @@
+name: Notify Docs Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger docs rebuild
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${{ secrets.DOCS_REPO_TOKEN }}" \
+            https://api.github.com/repos/Devkrea8-Technologies/nodela-docs/dispatches \
+            -d '{"event_type":"sdk-docs-updated","client_payload":{"sdk":"nodejs"}}'
