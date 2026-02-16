@@ -1,0 +1,70 @@
+{
+  "name": "Nodela SDK",
+  "version": "1.0.4",
+  "description": "Official documentation for the Nodela JavaScript/TypeScript SDK",
+  "baseUrl": "/docs",
+  "pages": [
+    {
+      "slug": "getting-started",
+      "title": "Getting Started",
+      "description": "Install the SDK and create your first invoice in minutes",
+      "file": "getting-started.md",
+      "order": 1,
+      "section": "Introduction"
+    },
+    {
+      "slug": "configuration",
+      "title": "Configuration",
+      "description": "Configure the SDK for sandbox or production environments",
+      "file": "configuration.md",
+      "order": 2,
+      "section": "Introduction"
+    },
+    {
+      "slug": "invoices",
+      "title": "Invoices",
+      "description": "Create payment invoices and verify their status",
+      "file": "invoices.md",
+      "order": 3,
+      "section": "API Reference"
+    },
+    {
+      "slug": "transactions",
+      "title": "Transactions",
+      "description": "List and paginate through your transaction history",
+      "file": "transactions.md",
+      "order": 4,
+      "section": "API Reference"
+    },
+    {
+      "slug": "error-handling",
+      "title": "Error Handling",
+      "description": "Handle errors gracefully with structured error types",
+      "file": "error-handling.md",
+      "order": 5,
+      "section": "API Reference"
+    },
+    {
+      "slug": "currencies",
+      "title": "Supported Currencies",
+      "description": "Full list of 60+ supported fiat currencies",
+      "file": "currencies.md",
+      "order": 6,
+      "section": "Reference"
+    },
+    {
+      "slug": "examples",
+      "title": "Examples",
+      "description": "Real-world integration patterns and recipes",
+      "file": "examples.md",
+      "order": 7,
+      "section": "Guides"
+    }
+  ],
+  "sections": [
+    { "name": "Introduction", "order": 1 },
+    { "name": "API Reference", "order": 2 },
+    { "name": "Reference", "order": 3 },
+    { "name": "Guides", "order": 4 }
+  ]
+}
