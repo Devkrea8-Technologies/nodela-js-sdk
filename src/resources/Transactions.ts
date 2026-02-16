@@ -60,7 +60,7 @@ export interface ListTransactionsResponse {
 
 export class Transactions extends BaseResource {
   constructor(client: HTTPClient) {
-    super(client, "/v1/transactions");
+    super(client, '/v1/transactions');
   }
 
   async list(params?: ListTransactionsParams): Promise<ListTransactionsResponse> {

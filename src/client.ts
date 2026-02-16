@@ -1,6 +1,6 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
-import { Config } from "./config";
-import { APIError, AuthenticationError, RateLimitError } from "./errors";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
+import { Config } from './config';
+import { APIError, AuthenticationError, RateLimitError } from './errors';
 
 export class HTTPClient {
   private axiosInstance: AxiosInstance;
@@ -14,12 +14,12 @@ export class HTTPClient {
 
   private createAxiosInstance(): AxiosInstance {
     return axios.create({
-      baseURL: this.config.get("baseURL"),
-      timeout: this.config.get("timeout"),
+      baseURL: this.config.get('baseURL'),
+      timeout: this.config.get('timeout'),
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${this.config.get("apiKey")}`,
-        "User-Agent": `nodela-sdk/${process.version}`,
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.config.get('apiKey')}`,
+        'User-Agent': `nodela-sdk/${process.version}`,
       },
     });
   }
@@ -51,7 +51,8 @@ export class HTTPClient {
       case 401: {
         const errorData = data as Record<string, unknown>;
         throw new AuthenticationError(
-          (typeof errorData?.message === 'string' ? errorData.message : undefined) || 'Invalid API key or unauthorized access'
+          (typeof errorData?.message === 'string' ? errorData.message : undefined) ||
+            'Invalid API key or unauthorized access'
         );
       }
       case 429: {

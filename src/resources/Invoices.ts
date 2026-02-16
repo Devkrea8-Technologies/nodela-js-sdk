@@ -3,17 +3,74 @@ import { HTTPClient } from '../client';
 
 export const SUPPORTED_CURRENCIES = [
   // Americas
-  "USD", "CAD", "MXN", "BRL", "ARS", "CLP", "COP", "PEN", "JMD", "TTD",
+  'USD',
+  'CAD',
+  'MXN',
+  'BRL',
+  'ARS',
+  'CLP',
+  'COP',
+  'PEN',
+  'JMD',
+  'TTD',
   // Europe
-  "EUR", "GBP", "CHF", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "RON", "BGN", "HRK", "ISK", "TRY", "RUB", "UAH",
+  'EUR',
+  'GBP',
+  'CHF',
+  'SEK',
+  'NOK',
+  'DKK',
+  'PLN',
+  'CZK',
+  'HUF',
+  'RON',
+  'BGN',
+  'HRK',
+  'ISK',
+  'TRY',
+  'RUB',
+  'UAH',
   // Africa
-  "NGN", "ZAR", "KES", "GHS", "EGP", "MAD", "TZS", "UGX", "XOF", "XAF", "ETB",
+  'NGN',
+  'ZAR',
+  'KES',
+  'GHS',
+  'EGP',
+  'MAD',
+  'TZS',
+  'UGX',
+  'XOF',
+  'XAF',
+  'ETB',
   // Asia
-  "JPY", "CNY", "INR", "KRW", "IDR", "MYR", "THB", "PHP", "VND", "SGD", "HKD", "TWD", "BDT", "PKR", "LKR",
+  'JPY',
+  'CNY',
+  'INR',
+  'KRW',
+  'IDR',
+  'MYR',
+  'THB',
+  'PHP',
+  'VND',
+  'SGD',
+  'HKD',
+  'TWD',
+  'BDT',
+  'PKR',
+  'LKR',
   // Middle East
-  "AED", "SAR", "QAR", "KWD", "BHD", "OMR", "ILS", "JOD",
+  'AED',
+  'SAR',
+  'QAR',
+  'KWD',
+  'BHD',
+  'OMR',
+  'ILS',
+  'JOD',
   // Oceania
-  "AUD", "NZD", "FJD",
+  'AUD',
+  'NZD',
+  'FJD',
 ] as const;
 
 export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number];
@@ -21,14 +78,14 @@ export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number];
 export interface CreateInvoiceParams {
   amount: number;
   currency: SupportedCurrency;
-  success_url?: string
+  success_url?: string;
   cancel_url?: string;
   webhook_url?: string;
   reference?: string;
   customer?: {
     name?: string;
     email: string;
-  }
+  };
   title?: string;
   description?: string;
 }
@@ -54,8 +111,8 @@ export interface CreateInvoiceResponse {
     };
     checkout_url: string;
     status?: string;
-    created_at: string
-  }
+    created_at: string;
+  };
 }
 
 export interface VerifyInvoiceResponse {
@@ -99,18 +156,20 @@ export interface VerifyInvoiceResponse {
 
 export class Invoices extends BaseResource {
   constructor(client: HTTPClient) {
-    super(client, "/v1/invoices");
+    super(client, '/v1/invoices');
   }
 
   async create(params: CreateInvoiceParams): Promise<CreateInvoiceResponse> {
     const upper = params.currency.toUpperCase() as SupportedCurrency;
     if (!SUPPORTED_CURRENCIES.includes(upper)) {
-      throw new Error(`Unsupported currency: "${params.currency}". Supported currencies: ${SUPPORTED_CURRENCIES.join(", ")}`);
+      throw new Error(
+        `Unsupported currency: "${params.currency}". Supported currencies: ${SUPPORTED_CURRENCIES.join(', ')}`
+      );
     }
     return this.client.post(this.basePath, { ...params, currency: upper });
   }
 
   async verify(invoiceId: string): Promise<VerifyInvoiceResponse> {
-    return this.client.get(this.buildPath(invoiceId, "verify"));
+    return this.client.get(this.buildPath(invoiceId, 'verify'));
   }
 }

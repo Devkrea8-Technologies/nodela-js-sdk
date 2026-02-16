@@ -1,4 +1,4 @@
-import { HTTPClient } from "../client";
+import { HTTPClient } from '../client';
 
 export abstract class BaseResource {
   protected client: HTTPClient;
@@ -10,7 +10,7 @@ export abstract class BaseResource {
   }
 
   protected buildPath(...segments: (string | number)[]): string {
-    return [this.basePath, ...segments].join("/")
+    return [this.basePath, ...segments].join('/');
   }
 
   protected buildQueryString(params?: Record<string, unknown> | object): string {
@@ -20,7 +20,7 @@ export abstract class BaseResource {
       .filter(([, value]) => value !== undefined && value !== null)
       .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
       .join('&');
-    
+
     return queryString ? `?${queryString}` : '';
   }
 }

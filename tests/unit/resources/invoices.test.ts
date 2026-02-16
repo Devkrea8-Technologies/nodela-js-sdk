@@ -5,7 +5,7 @@ import {
   VerifyInvoiceResponse,
   SUPPORTED_CURRENCIES,
   SupportedCurrency,
-} from '../../../src/resources/invoices';
+} from '../../../src/resources/Invoices';
 import { HTTPClient } from '../../../src/client';
 
 describe('Invoices', () => {

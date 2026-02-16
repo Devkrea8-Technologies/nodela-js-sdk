@@ -1,9 +1,9 @@
-import { Config, SDKConfigOptions } from "./config";
-import { HTTPClient } from "./client";
-import { Transactions } from "./resources/Transactions";
-import { Invoices } from "./resources/Invoices";
+import { Config, SDKConfigOptions } from './config';
+import { HTTPClient } from './client';
+import { Transactions } from './resources/Transactions';
+import { Invoices } from './resources/Invoices';
 
-export * from "./errors";
+export * from './errors';
 
 export class Nodela {
   private config: Config;
@@ -20,7 +20,7 @@ export class Nodela {
     this.invoices = new Invoices(this.client);
   }
 
-  getConfig(): ReturnType<Config["getAll"]> {
+  getConfig(): ReturnType<Config['getAll']> {
     return this.config.getAll();
   }
 }
