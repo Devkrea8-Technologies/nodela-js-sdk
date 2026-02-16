@@ -1,5 +1,11 @@
 # nodela-sdk
 
+## 1.0.3
+
+### Patch Changes
+
+- Fixed tagging issues in the publish workflow
+
 ## 1.0.2
 
 ### Patch Changes

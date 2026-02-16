@@ -6,7 +6,7 @@
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.18.0-brightgreen.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 
-The official JavaScript/TypeScript SDK for the [Nodela](https://nodela.com) stablecoin payments API. Accept crypto payments globally with support for 60+ fiat currencies, automatic currency conversion, and seamless checkout experiences.
+The official JavaScript/TypeScript SDK for the [Nodela](https://nodela.co) stablecoin payments API. Accept crypto payments globally with support for 60+ fiat currencies, automatic currency conversion, and seamless checkout experiences.
 
 ---
 
