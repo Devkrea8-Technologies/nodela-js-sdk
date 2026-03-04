@@ -1,5 +1,8 @@
 {
-  "name": "Nodela SDK",
+  "name": "Nodela Node.js SDK",
+  "title": "Nodela Node.js SDK",
+  "package": "nodela-sdk",
+  "installCommand": "npm install nodela-sdk",
   "version": "1.0.4",
   "description": "Official documentation for the Nodela JavaScript/TypeScript SDK",
   "baseUrl": "/docs",
@@ -62,9 +65,21 @@
     }
   ],
   "sections": [
-    { "name": "Introduction", "order": 1 },
-    { "name": "API Reference", "order": 2 },
-    { "name": "Reference", "order": 3 },
-    { "name": "Guides", "order": 4 }
+    {
+      "name": "Introduction",
+      "order": 1
+    },
+    {
+      "name": "API Reference",
+      "order": 2
+    },
+    {
+      "name": "Reference",
+      "order": 3
+    },
+    {
+      "name": "Guides",
+      "order": 4
+    }
   ]
 }
